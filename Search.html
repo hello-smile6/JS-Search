@@ -1,22 +1,6 @@
             <section id="page_searchbox">
                 <input id="page-search" placeholder="Search" default="search_result" type="text"><button style="display: none;" id="find">Search</button>
-                <script>
-                    setInterval(function() {
-                        var search=document.getElementById("page-search");
-                        var results=document.getElementsByClassName("search_result");
-                        for(var a=0;a<results.length;a++) {
-                            results[a].style.display="none";
-                        }
-                        var relevant=document.getElementsByClassName(search.value);
-                        for(var a=0;a<relevant.length;a++) {
-                            relevant[a].style.display="block";
-                        }
-                        if(search.value.length==0) {
-                            for(var a=0;a<results.length;a++) {
-                            results[a].style.display="block";    
-                            }
-                        }
-                    },1);
+                <script src="engine.js" onerror="console.log('JS-Search Engine Encountered Error. Ensure that engine.js is in the same directory and that scripts are not blocked.');">
                 </script>
                 <section id="page_results>
 			<a href="/" class="search_result h ho hom home" style="display: block;">Home</a>
